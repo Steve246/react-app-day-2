@@ -1,24 +1,36 @@
 import logo from './logo.svg';
 import './App.css';
+import Navbar from './component/Navbar'
+import BodyComponenentFunc from './component/BodyComponenetsfunc.js';
 
+
+import 'bootstrap/dist/css/bootstrap.min.css' 
+import Content from './component/Content';
+import Footer from './component/footer';
+import BodyComponent from './component/BodyComponent';
+
+import Parent from './component/Parent'
+import Greet from './component/Greet';
+import Counter from './component/Counter';
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    
+    <>
+      {/* <Navbar/> */}
+      <BodyComponenentFunc title = "test"/>
+      <BodyComponent firstName = "Steven"/>
+      {/* <div style = {{minHeight: '100vh'}}>
+        <Content/>
+      </div> */}
+
+      <Parent name = 'doni' age = {20}/>
+     
+      {/* <Footer/> */}
+
+      <Greet/>
+
+      <Counter default = {2}/>
+    </>
   );
 }
 
